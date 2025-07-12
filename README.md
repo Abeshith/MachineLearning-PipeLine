@@ -36,7 +36,7 @@
 
 
 <div align="center">
-<img src="outputs/workflow_diagram.png" alt="Machine Learning Pipeline Workflow" width="900" height="500"/>
+<img src="outputs/workflow.png" alt="Machine Learning Pipeline Workflow" width="900" height="500"/>
 </div>
 
 ---
