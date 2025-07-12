@@ -154,6 +154,11 @@ echo $AIRFLOW_HOME
 # Configure Airflow settings
 vim ~/airflow/airflow.cfg
 
+-> insert - i
+Replace "auth_manager = airflow.api_fastapi.auth.managers.simple.simple_auth_manager.SimpleAuthManager" in airflow.cfg file
+with "auth_manager=airflow.providers.fab.auth_manager.fab_auth_manager.FabAuthManager".
+After Updation press- > esc -> :wq!
+
 # Create DAGs directory
 mkdir -p ~/airflow/dags
 
