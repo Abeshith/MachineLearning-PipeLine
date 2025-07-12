@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-"""
-Main entry point for running ML pipeline stages
-"""
 import sys
 from pathlib import Path
 
