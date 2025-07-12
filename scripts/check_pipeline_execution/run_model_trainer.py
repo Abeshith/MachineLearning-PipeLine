@@ -5,8 +5,8 @@ Run Model Trainer Pipeline
 import sys
 from pathlib import Path
 
-# Add src to Python path
-project_root = Path(__file__).parent
+# Add src to Python path - go up 2 directories to reach project root
+project_root = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(project_root))
 
 from src.mlpipeline.pipeline.model_trainer_pipeline import ModelTrainerTrainingPipeline

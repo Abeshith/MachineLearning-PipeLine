@@ -1,0 +1,54 @@
+[2025-07-12 11:22:23,287] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2025-07-12 11:22:23,304] 107 dagshub - INFO - Accessing as abheshith7
+[2025-07-12 11:22:23,685] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/abheshith7/MachineLearning_PipeLine "HTTP/1.1 200 OK"
+[2025-07-12 11:22:24,051] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2025-07-12 11:22:24,051] 107 dagshub - INFO - Initialized MLflow to track repo "abheshith7/MachineLearning_PipeLine"
+[2025-07-12 11:22:24,066] 107 dagshub - INFO - Repository abheshith7/MachineLearning_PipeLine initialized!
+[2025-07-12 11:22:24,438] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/abheshith7/MachineLearning_PipeLine "HTTP/1.1 200 OK"
+[2025-07-12 11:22:24,444] 107 dagshub - INFO - Initialized MLflow to track repo "abheshith7/MachineLearning_PipeLine"
+[2025-07-12 11:22:24,452] 107 dagshub - INFO - Repository abheshith7/MachineLearning_PipeLine initialized!
+[2025-07-12 11:22:24,452] 20 src.mlpipeline.logging - INFO - >>>>>> stage Model Evaluation Stage started <<<<<<
+[2025-07-12 11:22:24,460] 25 src.mlpipeline.logging - INFO - yaml file: config\config.yaml loaded sucessfully
+[2025-07-12 11:22:24,468] 25 src.mlpipeline.logging - INFO - yaml file: config\params.yaml loaded sucessfully
+[2025-07-12 11:22:24,474] 25 src.mlpipeline.logging - INFO - yaml file: config\schema.yaml loaded sucessfully
+[2025-07-12 11:22:24,476] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts
+[2025-07-12 11:22:24,476] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts/model_evaluation
+[2025-07-12 11:22:33,935] 58 src.mlpipeline.logging - INFO - json file saved at: metrics.json
+[2025-07-12 11:22:35,364] 33 src.mlpipeline.logging - ERROR - INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+Traceback (most recent call last):
+  File "D:\MachineLearning PipeLine\run_model_evaluation.py", line 24, in main
+    model_evaluation_pipeline.initiate_model_evaluation()
+  File "D:\MachineLearning PipeLine\src\mlpipeline\pipeline\model_evaluation_pipeline.py", line 19, in initiate_model_evaluation
+    model_evaluation.log_into_mlflow()
+  File "D:\MachineLearning PipeLine\src\mlpipeline\components\model_evaluation.py", line 70, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model", registered_model_name="XGBModel")
+  File "D:\MachineLearning PipeLine\.venv\Lib\site-packages\mlflow\sklearn\__init__.py", line 426, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "D:\MachineLearning PipeLine\.venv\Lib\site-packages\mlflow\models\model.py", line 1161, in log
+    model = mlflow.initialize_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MachineLearning PipeLine\.venv\Lib\site-packages\mlflow\tracking\fluent.py", line 2130, in initialize_logged_model
+    model = _create_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MachineLearning PipeLine\.venv\Lib\site-packages\mlflow\tracking\fluent.py", line 2257, in _create_logged_model
+    return MlflowClient().create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MachineLearning PipeLine\.venv\Lib\site-packages\mlflow\tracking\client.py", line 5371, in create_logged_model
+    return self._tracking_client.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MachineLearning PipeLine\.venv\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 824, in create_logged_model
+    return self.store.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MachineLearning PipeLine\.venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 936, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MachineLearning PipeLine\.venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "D:\MachineLearning PipeLine\.venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 590, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MachineLearning PipeLine\.venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 304, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}

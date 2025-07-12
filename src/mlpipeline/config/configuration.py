@@ -97,17 +97,17 @@ class ConfigurationManager:
     def get_model_evaluation_config(self) -> ModelEvaluationConfig:
         config = self.config.model_evaluation
         schema = self.schema.TARGET_COLUMN
-        params = self.params.Elasticnet
+        params = self.params.XGB
 
         create_directories([config.root_dir])
 
         model_evaluation_config = ModelEvaluationConfig(
-            root_dir = config.root_dir,
-            model_path = config.model_path,
-            test_data_path = config.test_data_path,
+            root_dir = Path(config.root_dir),
+            model_path = Path(config.model_path),
+            test_data_path = Path(config.test_data_path),
             all_params = params,
-            metrics_file_name = config.metrics_file_name,
+            metrics_file_name = Path(config.metrics_file_name),
             target_column = schema.name,
-            mlflow_uri =  "https://dagshub.com/abheshith7/WineQuality-Prediction-Pipeline.mlflow"
+            mlflow_uri =  "https://dagshub.com/abheshith7/MachineLearning_PipeLine.mlflow"
         )
         return model_evaluation_config

@@ -1,0 +1,70 @@
+[2025-07-12 11:24:13,420] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2025-07-12 11:24:13,424] 107 dagshub - INFO - Accessing as abheshith7
+[2025-07-12 11:24:13,791] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/abheshith7/MachineLearning_PipeLine "HTTP/1.1 200 OK"
+[2025-07-12 11:24:14,141] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2025-07-12 11:24:14,146] 107 dagshub - INFO - Initialized MLflow to track repo "abheshith7/MachineLearning_PipeLine"
+[2025-07-12 11:24:14,149] 107 dagshub - INFO - Repository abheshith7/MachineLearning_PipeLine initialized!
+[2025-07-12 11:24:14,523] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/abheshith7/MachineLearning_PipeLine "HTTP/1.1 200 OK"
+[2025-07-12 11:24:14,523] 107 dagshub - INFO - Initialized MLflow to track repo "abheshith7/MachineLearning_PipeLine"
+[2025-07-12 11:24:14,523] 107 dagshub - INFO - Repository abheshith7/MachineLearning_PipeLine initialized!
+[2025-07-12 11:24:14,523] 25 src.mlpipeline.logging - INFO - >>>>>> stage Data Ingestion Stage started <<<<<<
+[2025-07-12 11:24:14,523] 25 src.mlpipeline.logging - INFO - yaml file: config\config.yaml loaded sucessfully
+[2025-07-12 11:24:14,535] 25 src.mlpipeline.logging - INFO - yaml file: config\params.yaml loaded sucessfully
+[2025-07-12 11:24:14,537] 25 src.mlpipeline.logging - INFO - yaml file: config\schema.yaml loaded sucessfully
+[2025-07-12 11:24:14,538] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts
+[2025-07-12 11:24:14,538] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts/data_ingestion
+[2025-07-12 11:24:14,539] 35 src.mlpipeline.logging - INFO - artifacts\data_ingestion\train.csv already exists. Skipping download.
+[2025-07-12 11:24:14,539] 44 src.mlpipeline.logging - INFO - No zip files found to extract.
+[2025-07-12 11:24:14,539] 28 src.mlpipeline.logging - INFO - >>>>>> stage Data Ingestion Stage completed <<<<<<
+[2025-07-12 11:24:14,539] 36 src.mlpipeline.logging - INFO - >>>>>> stage Data Validation Stage started <<<<<<
+[2025-07-12 11:24:14,542] 25 src.mlpipeline.logging - INFO - yaml file: config\config.yaml loaded sucessfully
+[2025-07-12 11:24:14,543] 25 src.mlpipeline.logging - INFO - yaml file: config\params.yaml loaded sucessfully
+[2025-07-12 11:24:14,545] 25 src.mlpipeline.logging - INFO - yaml file: config\schema.yaml loaded sucessfully
+[2025-07-12 11:24:14,545] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts
+[2025-07-12 11:24:14,545] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts/data_validation
+[2025-07-12 11:24:14,905] 23 src.mlpipeline.logging - INFO - Data columns: ['id', 'Sex', 'Age', 'Height', 'Weight', 'Duration', 'Heart_Rate', 'Body_Temp', 'Calories']
+[2025-07-12 11:24:14,905] 24 src.mlpipeline.logging - INFO - Schema columns: ['id', 'Sex', 'Age', 'Height', 'Weight', 'Duration', 'Heart_Rate', 'Body_Temp', 'Calories']
+[2025-07-12 11:24:14,905] 51 src.mlpipeline.logging - INFO - All columns validation passed!
+[2025-07-12 11:24:14,922] 39 src.mlpipeline.logging - INFO - >>>>>> stage Data Validation Stage completed <<<<<<
+[2025-07-12 11:24:14,922] 47 src.mlpipeline.logging - INFO - >>>>>> stage Data Transformation Stage started <<<<<<
+[2025-07-12 11:24:14,935] 27 src.mlpipeline.logging - INFO - Validation status: True
+[2025-07-12 11:24:14,937] 25 src.mlpipeline.logging - INFO - yaml file: config\config.yaml loaded sucessfully
+[2025-07-12 11:24:14,937] 25 src.mlpipeline.logging - INFO - yaml file: config\params.yaml loaded sucessfully
+[2025-07-12 11:24:14,940] 25 src.mlpipeline.logging - INFO - yaml file: config\schema.yaml loaded sucessfully
+[2025-07-12 11:24:14,940] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts
+[2025-07-12 11:24:14,940] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts/data_transformation
+[2025-07-12 11:24:15,357] 16 src.mlpipeline.logging - INFO - Original data loaded: (750000, 9)
+[2025-07-12 11:24:15,442] 20 src.mlpipeline.logging - INFO - Feature engineering completed: (750000, 13)
+[2025-07-12 11:24:15,754] 34 src.mlpipeline.logging - INFO - Starting statistical tests...
+[2025-07-12 11:24:16,046] 83 src.mlpipeline.logging - INFO - Statistical test results saved to artifacts\data_transformation\statstestresults.txt
+[2025-07-12 11:24:20,915] 33 src.mlpipeline.logging - INFO - Train and test data split completed.
+[2025-07-12 11:24:20,915] 34 src.mlpipeline.logging - INFO - Train data shape: (600000, 13)
+[2025-07-12 11:24:20,915] 35 src.mlpipeline.logging - INFO - Test data shape: (150000, 13)
+[2025-07-12 11:24:20,936] 50 src.mlpipeline.logging - INFO - >>>>>> stage Data Transformation Stage completed <<<<<<
+[2025-07-12 11:24:20,936] 58 src.mlpipeline.logging - INFO - >>>>>> stage Model Training Stage started <<<<<<
+[2025-07-12 11:24:20,937] 25 src.mlpipeline.logging - INFO - yaml file: config\config.yaml loaded sucessfully
+[2025-07-12 11:24:20,937] 25 src.mlpipeline.logging - INFO - yaml file: config\params.yaml loaded sucessfully
+[2025-07-12 11:24:20,940] 25 src.mlpipeline.logging - INFO - yaml file: config\schema.yaml loaded sucessfully
+[2025-07-12 11:24:20,940] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts
+[2025-07-12 11:24:20,940] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts/model_trainer
+[2025-07-12 11:24:20,940] 15 src.mlpipeline.logging - INFO - Starting model training...
+[2025-07-12 11:24:21,653] 21 src.mlpipeline.logging - INFO - Training data shape: (600000, 13)
+[2025-07-12 11:24:21,653] 22 src.mlpipeline.logging - INFO - Test data shape: (150000, 13)
+[2025-07-12 11:24:21,669] 33 src.mlpipeline.logging - INFO - Features used: ['Sex', 'Age', 'Height', 'Weight', 'Duration', 'Heart_Rate', 'Body_Temp', 'BMI', 'Calories_per_min', 'Age_Weight', 'Heart_Temp']
+[2025-07-12 11:24:21,669] 34 src.mlpipeline.logging - INFO - Target: Calories
+[2025-07-12 11:24:21,669] 44 src.mlpipeline.logging - INFO - Training RandomForest model...
+[2025-07-12 11:25:11,120] 56 src.mlpipeline.logging - INFO - Model training completed!
+[2025-07-12 11:25:11,120] 57 src.mlpipeline.logging - INFO - Test RMSE: 2.1024
+[2025-07-12 11:25:11,120] 58 src.mlpipeline.logging - INFO - Test R2 Score: 0.9989
+[2025-07-12 11:25:11,217] 67 src.mlpipeline.logging - INFO - Model saved to: artifacts\model_trainer\model.joblib
+[2025-07-12 11:25:11,228] 61 src.mlpipeline.logging - INFO - >>>>>> stage Model Training Stage completed <<<<<<
+[2025-07-12 11:25:11,228] 69 src.mlpipeline.logging - INFO - >>>>>> stage Model Evaluation Stage started <<<<<<
+[2025-07-12 11:25:11,230] 25 src.mlpipeline.logging - INFO - yaml file: config\config.yaml loaded sucessfully
+[2025-07-12 11:25:11,230] 25 src.mlpipeline.logging - INFO - yaml file: config\params.yaml loaded sucessfully
+[2025-07-12 11:25:11,232] 25 src.mlpipeline.logging - INFO - yaml file: config\schema.yaml loaded sucessfully
+[2025-07-12 11:25:11,232] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts
+[2025-07-12 11:25:11,233] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts/model_evaluation
+[2025-07-12 11:25:16,039] 58 src.mlpipeline.logging - INFO - json file saved at: metrics.json
+[2025-07-12 11:25:16,749] 79 src.mlpipeline.logging - WARNING - Failed to log model to MLflow: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+[2025-07-12 11:25:16,749] 83 src.mlpipeline.logging - INFO - Model evaluation completed successfully
+[2025-07-12 11:25:17,510] 72 src.mlpipeline.logging - INFO - >>>>>> stage Model Evaluation Stage completed <<<<<<

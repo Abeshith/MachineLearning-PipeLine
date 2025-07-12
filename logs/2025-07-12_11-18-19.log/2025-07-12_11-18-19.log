@@ -1,0 +1,40 @@
+[2025-07-12 11:18:34,141] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2025-07-12 11:18:34,159] 107 dagshub - INFO - Accessing as abheshith7
+[2025-07-12 11:18:34,547] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/abheshith7/MachineLearning_PipeLine "HTTP/1.1 200 OK"
+[2025-07-12 11:18:34,890] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2025-07-12 11:18:34,891] 107 dagshub - INFO - Initialized MLflow to track repo "abheshith7/MachineLearning_PipeLine"
+[2025-07-12 11:18:34,891] 107 dagshub - INFO - Repository abheshith7/MachineLearning_PipeLine initialized!
+[2025-07-12 11:18:35,267] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/abheshith7/MachineLearning_PipeLine "HTTP/1.1 200 OK"
+[2025-07-12 11:18:35,267] 107 dagshub - INFO - Initialized MLflow to track repo "abheshith7/MachineLearning_PipeLine"
+[2025-07-12 11:18:35,282] 107 dagshub - INFO - Repository abheshith7/MachineLearning_PipeLine initialized!
+[2025-07-12 11:18:35,282] 20 src.mlpipeline.logging - INFO - >>>>>> stage Model Evaluation Stage started <<<<<<
+[2025-07-12 11:18:35,289] 25 src.mlpipeline.logging - INFO - yaml file: config\config.yaml loaded sucessfully
+[2025-07-12 11:18:35,289] 25 src.mlpipeline.logging - INFO - yaml file: config\params.yaml loaded sucessfully
+[2025-07-12 11:18:35,301] 25 src.mlpipeline.logging - INFO - yaml file: config\schema.yaml loaded sucessfully
+[2025-07-12 11:18:35,304] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts
+[2025-07-12 11:18:35,305] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts/model_evaluation
+[2025-07-12 11:18:38,782] 33 src.mlpipeline.logging - ERROR - The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- id
+Traceback (most recent call last):
+  File "D:\MachineLearning PipeLine\run_model_evaluation.py", line 24, in main
+    model_evaluation_pipeline.initiate_model_evaluation()
+  File "D:\MachineLearning PipeLine\src\mlpipeline\pipeline\model_evaluation_pipeline.py", line 19, in initiate_model_evaluation
+    model_evaluation.log_into_mlflow()
+  File "D:\MachineLearning PipeLine\src\mlpipeline\components\model_evaluation.py", line 40, in log_into_mlflow
+    predictions = model.predict(X_test)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MachineLearning PipeLine\.venv\Lib\site-packages\sklearn\ensemble\_forest.py", line 1065, in predict
+    X = self._validate_X_predict(X)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MachineLearning PipeLine\.venv\Lib\site-packages\sklearn\ensemble\_forest.py", line 637, in _validate_X_predict
+    X = validate_data(
+        ^^^^^^^^^^^^^^
+  File "D:\MachineLearning PipeLine\.venv\Lib\site-packages\sklearn\utils\validation.py", line 2929, in validate_data
+    _check_feature_names(_estimator, X, reset=reset)
+  File "D:\MachineLearning PipeLine\.venv\Lib\site-packages\sklearn\utils\validation.py", line 2787, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- id
+
