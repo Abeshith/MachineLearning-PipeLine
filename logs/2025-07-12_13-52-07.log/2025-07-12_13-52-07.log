@@ -1,0 +1,4 @@
+[2025-07-12 13:52:09,108] 25 src.mlpipeline.logging - INFO - Model loaded successfully
+[2025-07-12 13:52:09,129] 97 werkzeug - WARNING -  * Debugger is active!
+[2025-07-12 13:52:09,129] 97 werkzeug - INFO -  * Debugger PIN: 119-896-947
+[2025-07-12 13:53:43,203] 97 werkzeug - INFO -  * Detected change in 'D:\\MachineLearning PipeLine\\app.py', reloading

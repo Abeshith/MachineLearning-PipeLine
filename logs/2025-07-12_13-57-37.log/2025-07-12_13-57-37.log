@@ -1,0 +1,9 @@
+[2025-07-12 13:57:38,911] 25 src.mlpipeline.logging - INFO - Model loaded successfully
+[2025-07-12 13:57:38,929] 25 src.mlpipeline.logging - INFO - Model loaded successfully
+[2025-07-12 13:57:38,937] 97 werkzeug - WARNING -  * Debugger is active!
+[2025-07-12 13:57:38,941] 97 werkzeug - INFO -  * Debugger PIN: 119-896-947
+[2025-07-12 13:57:38,951] 97 werkzeug - WARNING -  * Debugger is active!
+[2025-07-12 13:57:38,954] 97 werkzeug - INFO -  * Debugger PIN: 119-896-947
+[2025-07-12 13:57:39,566] 97 werkzeug - INFO - 127.0.0.1 - - [12/Jul/2025 13:57:39] "GET /?id=9adb36d6-a812-4645-9ad8-7bbd5ed57abf&vscodeBrowserReqId=1752308859131 HTTP/1.1" 200 -
+[2025-07-12 13:59:03,056] 97 werkzeug - INFO -  * Detected change in 'D:\\MachineLearning PipeLine\\app.py', reloading
+[2025-07-12 13:59:03,077] 97 werkzeug - INFO -  * Detected change in 'D:\\MachineLearning PipeLine\\app.py', reloading

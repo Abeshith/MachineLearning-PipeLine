@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 Calorie Prediction App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #28a745;
+            display: none;
+        }
+
+        .result.show {
+            display: block;
+        }
+
+        .result h3 {
+            color: #28a745;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .result p {
+            color: #333;
+            font-size: 1.1em;
+        }
+
+        .loading {
+            text-align: center;
+            display: none;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .emoji {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        .error {
+            background: #f8d7da;
+            border-left: 5px solid #dc3545;
+            color: #721c24;
+        }
+
+        .icon {
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔥 Calorie Prediction</h1>
+            <p>Enter your workout details to predict calories burned</p>
+        </div>
+
+        <form id="predictionForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="sex"><span class="icon">👤</span>Gender</label>
+                    <select id="sex" name="sex" required>
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="age"><span class="icon">📅</span>Age (years)</label>
+                    <input type="number" id="age" name="age" min="18" max="80" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="height"><span class="icon">📏</span>Height (cm)</label>
+                    <input type="number" id="height" name="height" min="140" max="220" required>
+                </div>
+                <div class="form-group">
+                    <label for="weight"><span class="icon">⚖️</span>Weight (kg)</label>
+                    <input type="number" id="weight" name="weight" min="40" max="150" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="duration"><span class="icon">⏱️</span>Duration (minutes)</label>
+                    <input type="number" id="duration" name="duration" min="10" max="120" required>
+                </div>
+                <div class="form-group">
+                    <label for="heart_rate"><span class="icon">❤️</span>Heart Rate (bpm)</label>
+                    <input type="number" id="heart_rate" name="heart_rate" min="60" max="200" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="body_temp"><span class="icon">🌡️</span>Body Temperature (°C)</label>
+                <input type="number" id="body_temp" name="body_temp" min="36" max="42" step="0.1" required>
+            </div>
+
+            <button type="submit" class="btn">🔥 Predict Calories Burned</button>
+        </form>
+
+        <div id="loading" class="loading">
+            <p>🔄 Calculating calories...</p>
+        </div>
+
+        <div id="result" class="result">
+            <h3>🎯 Prediction Result</h3>
+            <p id="prediction-text"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('predictionForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const loading = document.getElementById('loading');
+            const result = document.getElementById('result');
+            const predictionText = document.getElementById('prediction-text');
+            
+            // Show loading, hide result
+            loading.classList.add('show');
+            result.classList.remove('show');
+            result.classList.remove('error');
+            
+            try {
+                const formData = new FormData(this);
+                const response = await fetch('/predict', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                loading.classList.remove('show');
+                
+                if (response.ok) {
+                    predictionText.innerHTML = `
+                        <strong>Estimated Calories Burned: ${data.prediction} calories</strong><br>
+                        <small>Based on your workout parameters and body metrics</small>
+                    `;
+                    result.classList.add('show');
+                } else {
+                    throw new Error(data.error || 'Prediction failed');
+                }
+                
+            } catch (error) {
+                loading.classList.remove('show');
+                predictionText.innerHTML = `
+                    <strong>Error: ${error.message}</strong><br>
+                    <small>Please check your inputs and try again</small>
+                `;
+                result.classList.add('show', 'error');
+            }
+        });
+
+        // Add some sample data for testing
+        function fillSampleData() {
+            document.getElementById('sex').value = 'male';
+            document.getElementById('age').value = '30';
+            document.getElementById('height').value = '175';
+            document.getElementById('weight').value = '70';
+            document.getElementById('duration').value = '45';
+            document.getElementById('heart_rate').value = '140';
+            document.getElementById('body_temp').value = '37.5';
+        }
+
+        // Add double-click to fill sample data (for testing)
+        document.querySelector('.header h1').addEventListener('dblclick', fillSampleData);
+    </script>
+</body>
+</html>

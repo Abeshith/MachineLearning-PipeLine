@@ -4,4 +4,12 @@ mlflow
 scikit-learn
 matplotlib
 dagshub
-airflow
+apache-airflow
+python-box
+ensure
+kaggle
+dvc
+flask
+joblib
+pathlib
+pytest

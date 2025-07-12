@@ -1,0 +1,10 @@
+[2025-07-12 13:53:46,951] 25 src.mlpipeline.logging - INFO - Model loaded successfully
+[2025-07-12 13:53:46,951] 25 src.mlpipeline.logging - INFO - Model loaded successfully
+[2025-07-12 13:53:46,968] 97 werkzeug - WARNING -  * Debugger is active!
+[2025-07-12 13:53:46,968] 97 werkzeug - WARNING -  * Debugger is active!
+[2025-07-12 13:53:46,977] 97 werkzeug - INFO -  * Debugger PIN: 119-896-947
+[2025-07-12 13:53:46,977] 97 werkzeug - INFO -  * Debugger PIN: 119-896-947
+[2025-07-12 13:54:10,832] 82 src.mlpipeline.logging - INFO - Prediction made: 294.99 calories
+[2025-07-12 13:54:10,832] 97 werkzeug - INFO - 127.0.0.1 - - [12/Jul/2025 13:54:10] "POST /predict HTTP/1.1" 200 -
+[2025-07-12 13:55:54,144] 97 werkzeug - INFO -  * Detected change in 'D:\\MachineLearning PipeLine\\app.py', reloading
+[2025-07-12 13:55:54,144] 97 werkzeug - INFO -  * Detected change in 'D:\\MachineLearning PipeLine\\app.py', reloading
