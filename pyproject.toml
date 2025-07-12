@@ -1,0 +1,21 @@
+[project]
+name = "machinelearning-pipeline"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "box>=0.1.5",
+    "catboost>=1.2.8",
+    "dagshub>=0.5.10",
+    "dvc>=3.61.0",
+    "ensure>=1.0.4",
+    "kaggle>=1.7.4.5",
+    "matplotlib>=3.10.3",
+    "mlflow>=3.1.1",
+    "numpy>=2.3.1",
+    "pandas>=2.3.1",
+    "python-box>=7.3.2",
+    "scikit-learn>=1.7.0",
+    "vox>=0.0.1",
+]

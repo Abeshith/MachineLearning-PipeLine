@@ -1,0 +1,15 @@
+[2025-07-12 10:01:48,942] 20 src.mlpipeline.logging - INFO - >>>>>> stage Data Transformation Stage started <<<<<<
+[2025-07-12 10:01:48,942] 25 src.mlpipeline.logging - ERROR - Data Validation failed. Cannot proceed with Data Transformation.
+Traceback (most recent call last):
+  File "D:\MachineLearning PipeLine\src\mlpipeline\pipeline\data_transformation_pipeline.py", line 23, in initiate_data_transformation
+    raise Exception("Data Validation failed. Cannot proceed with Data Transformation.")
+Exception: Data Validation failed. Cannot proceed with Data Transformation.
+[2025-07-12 10:01:48,942] 34 src.mlpipeline.logging - ERROR - Data Validation failed. Cannot proceed with Data Transformation.
+Traceback (most recent call last):
+  File "D:\MachineLearning PipeLine\run_data_transformation.py", line 24, in main
+    data_transformation_pipeline.initiate_data_transformation()
+  File "D:\MachineLearning PipeLine\src\mlpipeline\pipeline\data_transformation_pipeline.py", line 26, in initiate_data_transformation
+    raise e
+  File "D:\MachineLearning PipeLine\src\mlpipeline\pipeline\data_transformation_pipeline.py", line 23, in initiate_data_transformation
+    raise Exception("Data Validation failed. Cannot proceed with Data Transformation.")
+Exception: Data Validation failed. Cannot proceed with Data Transformation.

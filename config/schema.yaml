@@ -1,0 +1,17 @@
+# Data schema definition
+COLUMNS:
+  id: int64
+  Sex: object
+  Age: int64
+  Height: float64
+  Weight: float64
+  Duration: float64
+  Heart_Rate: float64
+  Body_Temp: float64
+  Calories: float64
+
+# Expected data structure
+expected_columns: ["id", "Sex", "Age", "Height", "Weight", "Duration", "Heart_Rate", "Body_Temp", "Calories"]
+
+TARGET_COLUMN: 
+  name: 'Calories'

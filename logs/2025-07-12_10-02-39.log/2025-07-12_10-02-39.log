@@ -1,0 +1,65 @@
+[2025-07-12 10:02:40,756] 20 src.mlpipeline.logging - INFO - >>>>>> stage Data Transformation Stage started <<<<<<
+[2025-07-12 10:02:40,756] 27 src.mlpipeline.logging - INFO - Validation status: True
+[2025-07-12 10:02:40,761] 25 src.mlpipeline.logging - INFO - yaml file: config\config.yaml loaded sucessfully
+[2025-07-12 10:02:40,761] 25 src.mlpipeline.logging - INFO - yaml file: config\params.yaml loaded sucessfully
+[2025-07-12 10:02:40,761] 25 src.mlpipeline.logging - INFO - yaml file: config\schema.yaml loaded sucessfully
+[2025-07-12 10:02:40,761] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts
+[2025-07-12 10:02:40,761] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts/data_transformation
+[2025-07-12 10:02:40,761] 35 src.mlpipeline.logging - INFO - Starting data transformation process
+[2025-07-12 10:02:41,160] 39 src.mlpipeline.logging - INFO - Data loaded successfully. Shape: (750000, 9)
+[2025-07-12 10:02:41,174] 45 src.mlpipeline.logging - INFO - Step 1: Removing outliers using Z-score method
+[2025-07-12 10:02:41,174] 20 src.mlpipeline.logging - INFO - Removing outliers using Z-score method with threshold 3.0
+[2025-07-12 10:02:41,174] 21 src.mlpipeline.logging - INFO - Original data shape: (750000, 9)
+[2025-07-12 10:02:41,400] 26 src.mlpipeline.logging - INFO - Data shape after outlier removal: (746084, 9)
+[2025-07-12 10:02:41,400] 27 src.mlpipeline.logging - INFO - Removed 3916 outliers (0.52%)
+[2025-07-12 10:02:41,402] 49 src.mlpipeline.logging - INFO - Step 2: Applying feature engineering
+[2025-07-12 10:02:41,402] 42 src.mlpipeline.logging - INFO - Starting feature engineering
+[2025-07-12 10:02:41,424] 48 src.mlpipeline.logging - INFO - Added BMI feature
+[2025-07-12 10:02:41,424] 53 src.mlpipeline.logging - INFO - Added Calories_per_min feature
+[2025-07-12 10:02:41,457] 58 src.mlpipeline.logging - INFO - Converted Sex to numeric
+[2025-07-12 10:02:41,457] 63 src.mlpipeline.logging - INFO - Added Age_Weight interaction feature
+[2025-07-12 10:02:41,476] 67 src.mlpipeline.logging - INFO - Added Heart_Temp interaction feature
+[2025-07-12 10:02:41,476] 69 src.mlpipeline.logging - INFO - Feature engineering completed. New shape: (746084, 13)
+[2025-07-12 10:02:41,476] 53 src.mlpipeline.logging - INFO - Step 3: Splitting data into train and test sets
+[2025-07-12 10:02:41,831] 61 src.mlpipeline.logging - INFO - Train set shape: (596867, 13)
+[2025-07-12 10:02:41,831] 62 src.mlpipeline.logging - INFO - Test set shape: (149217, 13)
+[2025-07-12 10:02:41,831] 65 src.mlpipeline.logging - INFO - Step 4: Calculating feature correlations
+[2025-07-12 10:02:41,831] 87 src.mlpipeline.logging - INFO - Calculating correlations with target 'Calories'
+[2025-07-12 10:02:41,840] 93 src.mlpipeline.logging - INFO - Age correlation with Calories: 0.143
+[2025-07-12 10:02:41,840] 93 src.mlpipeline.logging - INFO - Height correlation with Calories: -0.005
+[2025-07-12 10:02:41,859] 93 src.mlpipeline.logging - INFO - Weight correlation with Calories: 0.014
+[2025-07-12 10:02:41,859] 93 src.mlpipeline.logging - INFO - Duration correlation with Calories: 0.960
+[2025-07-12 10:02:41,874] 93 src.mlpipeline.logging - INFO - Heart_Rate correlation with Calories: 0.908
+[2025-07-12 10:02:41,874] 93 src.mlpipeline.logging - INFO - Body_Temp correlation with Calories: 0.833
+[2025-07-12 10:02:41,893] 93 src.mlpipeline.logging - INFO - Calories_per_min correlation with Calories: 0.860
+[2025-07-12 10:02:41,893] 93 src.mlpipeline.logging - INFO - Age_Weight correlation with Calories: 0.136
+[2025-07-12 10:02:41,909] 93 src.mlpipeline.logging - INFO - Heart_Temp correlation with Calories: 0.925
+[2025-07-12 10:02:41,909] 69 src.mlpipeline.logging - INFO - Step 5: Performing ANOVA test for Sex variable
+[2025-07-12 10:02:41,909] 110 src.mlpipeline.logging - INFO - Performing ANOVA test for Sex vs Calories
+[2025-07-12 10:02:41,972] 117 src.mlpipeline.logging - INFO - ANOVA test for Sex: F=65.078, p=0.000
+[2025-07-12 10:02:41,974] 73 src.mlpipeline.logging - INFO - Step 6: Preparing features and target for modeling
+[2025-07-12 10:02:41,974] 135 src.mlpipeline.logging - INFO - Preparing features and target
+[2025-07-12 10:02:41,974] 136 src.mlpipeline.logging - INFO - Features: ['Sex', 'Age', 'Height', 'Weight', 'Duration', 'Heart_Rate', 'Body_Temp', 'BMI', 'Age_Weight', 'Heart_Temp']
+[2025-07-12 10:02:41,974] 137 src.mlpipeline.logging - INFO - Target: Calories
+[2025-07-12 10:02:42,040] 143 src.mlpipeline.logging - INFO - Applied log1p transformation to target
+[2025-07-12 10:02:42,040] 147 src.mlpipeline.logging - INFO - Features shape: (596867, 10)
+[2025-07-12 10:02:42,040] 148 src.mlpipeline.logging - INFO - Target shape: (596867,)
+[2025-07-12 10:02:42,040] 135 src.mlpipeline.logging - INFO - Preparing features and target
+[2025-07-12 10:02:42,040] 136 src.mlpipeline.logging - INFO - Features: ['Sex', 'Age', 'Height', 'Weight', 'Duration', 'Heart_Rate', 'Body_Temp', 'BMI', 'Age_Weight', 'Heart_Temp']
+[2025-07-12 10:02:42,040] 137 src.mlpipeline.logging - INFO - Target: Calories
+[2025-07-12 10:02:42,059] 143 src.mlpipeline.logging - INFO - Applied log1p transformation to target
+[2025-07-12 10:02:42,059] 147 src.mlpipeline.logging - INFO - Features shape: (149217, 10)
+[2025-07-12 10:02:42,059] 148 src.mlpipeline.logging - INFO - Target shape: (149217,)
+[2025-07-12 10:02:42,059] 78 src.mlpipeline.logging - INFO - Step 7: Generating transformation report
+[2025-07-12 10:02:42,059] 180 src.mlpipeline.logging - INFO - Transformation report generated
+[2025-07-12 10:02:42,059] 181 src.mlpipeline.logging - INFO - Original shape: (750000, 9)
+[2025-07-12 10:02:42,059] 182 src.mlpipeline.logging - INFO - Transformed shape: (746084, 13)
+[2025-07-12 10:02:42,059] 183 src.mlpipeline.logging - INFO - New features: ['Heart_Temp', 'Age_Weight', 'Calories_per_min', 'BMI']
+[2025-07-12 10:02:42,059] 184 src.mlpipeline.logging - INFO - Outliers removed: 3916 (0.52%)
+[2025-07-12 10:02:42,059] 185 src.mlpipeline.logging - INFO - High correlation features (>0.5): ['Duration', 'Heart_Rate', 'Body_Temp', 'Calories_per_min', 'Heart_Temp']
+[2025-07-12 10:02:42,059] 82 src.mlpipeline.logging - INFO - Step 8: Saving transformed data and artifacts
+[2025-07-12 10:02:47,732] 58 src.mlpipeline.logging - INFO - json file saved at: artifacts\data_transformation\transformation_report.json
+[2025-07-12 10:02:47,732] 58 src.mlpipeline.logging - INFO - json file saved at: artifacts\data_transformation\feature_info.json
+[2025-07-12 10:02:47,732] 118 src.mlpipeline.logging - INFO - All artifacts saved successfully
+[2025-07-12 10:02:47,732] 85 src.mlpipeline.logging - INFO - Data transformation completed successfully
+[2025-07-12 10:02:47,771] 26 src.mlpipeline.logging - INFO - >>>>>> stage Data Transformation Stage completed <<<<<<

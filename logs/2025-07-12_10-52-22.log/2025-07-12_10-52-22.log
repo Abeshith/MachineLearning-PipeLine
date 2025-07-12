@@ -1,0 +1,21 @@
+[2025-07-12 10:52:25,740] 20 src.mlpipeline.logging - INFO - >>>>>> stage Model Trainer Stage started <<<<<<
+[2025-07-12 10:52:25,742] 25 src.mlpipeline.logging - INFO - yaml file: config\config.yaml loaded sucessfully
+[2025-07-12 10:52:25,746] 25 src.mlpipeline.logging - INFO - yaml file: config\params.yaml loaded sucessfully
+[2025-07-12 10:52:25,746] 25 src.mlpipeline.logging - INFO - yaml file: config\schema.yaml loaded sucessfully
+[2025-07-12 10:52:25,746] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts
+[2025-07-12 10:52:25,746] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts/model_trainer
+[2025-07-12 10:52:25,746] 14 src.mlpipeline.logging - INFO - Starting model training...
+[2025-07-12 10:52:26,590] 20 src.mlpipeline.logging - INFO - Training data shape: (600000, 13)
+[2025-07-12 10:52:26,590] 21 src.mlpipeline.logging - INFO - Test data shape: (150000, 13)
+[2025-07-12 10:52:26,628] 32 src.mlpipeline.logging - INFO - Features used: ['Sex', 'Age', 'Height', 'Weight', 'Duration', 'Heart_Rate', 'Body_Temp', 'BMI', 'Calories_per_min', 'Age_Weight', 'Heart_Temp']
+[2025-07-12 10:52:26,628] 33 src.mlpipeline.logging - INFO - Target: Calories
+[2025-07-12 10:52:26,628] 34 src.mlpipeline.logging - ERROR - module 'xgboost' has no attribute 'XGBRegressor'
+Traceback (most recent call last):
+  File "D:\MachineLearning PipeLine\run_model_trainer.py", line 24, in main
+    model_trainer_pipeline.initiate_model_trainer()
+  File "D:\MachineLearning PipeLine\src\mlpipeline\pipeline\model_trainer_pipeline.py", line 17, in initiate_model_trainer
+    model_trainer.train_model()
+  File "D:\MachineLearning PipeLine\src\mlpipeline\components\model_trainer.py", line 36, in train_model
+    model = xgb.XGBRegressor(
+            ^^^^^^^^^^^^^^^^
+AttributeError: module 'xgboost' has no attribute 'XGBRegressor'

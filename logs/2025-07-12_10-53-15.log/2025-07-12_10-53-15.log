@@ -1,0 +1,17 @@
+[2025-07-12 10:53:19,054] 20 src.mlpipeline.logging - INFO - >>>>>> stage Model Trainer Stage started <<<<<<
+[2025-07-12 10:53:19,054] 25 src.mlpipeline.logging - INFO - yaml file: config\config.yaml loaded sucessfully
+[2025-07-12 10:53:19,054] 25 src.mlpipeline.logging - INFO - yaml file: config\params.yaml loaded sucessfully
+[2025-07-12 10:53:19,058] 25 src.mlpipeline.logging - INFO - yaml file: config\schema.yaml loaded sucessfully
+[2025-07-12 10:53:19,058] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts
+[2025-07-12 10:53:19,058] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts/model_trainer
+[2025-07-12 10:53:19,058] 15 src.mlpipeline.logging - INFO - Starting model training...
+[2025-07-12 10:53:19,706] 21 src.mlpipeline.logging - INFO - Training data shape: (600000, 13)
+[2025-07-12 10:53:19,706] 22 src.mlpipeline.logging - INFO - Test data shape: (150000, 13)
+[2025-07-12 10:53:19,742] 33 src.mlpipeline.logging - INFO - Features used: ['Sex', 'Age', 'Height', 'Weight', 'Duration', 'Heart_Rate', 'Body_Temp', 'BMI', 'Calories_per_min', 'Age_Weight', 'Heart_Temp']
+[2025-07-12 10:53:19,742] 34 src.mlpipeline.logging - INFO - Target: Calories
+[2025-07-12 10:53:19,742] 44 src.mlpipeline.logging - INFO - Training RandomForest model...
+[2025-07-12 10:54:06,793] 56 src.mlpipeline.logging - INFO - Model training completed!
+[2025-07-12 10:54:06,793] 57 src.mlpipeline.logging - INFO - Test RMSE: 2.1024
+[2025-07-12 10:54:06,793] 58 src.mlpipeline.logging - INFO - Test R2 Score: 0.9989
+[2025-07-12 10:54:06,839] 67 src.mlpipeline.logging - INFO - Model saved to: artifacts\model_trainer\model.joblib
+[2025-07-12 10:54:06,851] 26 src.mlpipeline.logging - INFO - >>>>>> stage Model Trainer Stage completed <<<<<<

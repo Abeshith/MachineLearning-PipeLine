@@ -1,0 +1,25 @@
+STATISTICAL TEST RESULTS
+==================================================
+
+OUTLIER REMOVAL:
+Original training data shape: (600000, 13)
+Clean training data shape: (596868, 13)
+Outliers removed: 3132 (0.52%)
+
+FEATURE CORRELATIONS WITH CALORIES:
+----------------------------------------
+Age correlation with Calories: 0.143
+Height correlation with Calories: -0.007
+Weight correlation with Calories: 0.013
+Duration correlation with Calories: 0.960
+Heart_Rate correlation with Calories: 0.908
+Body_Temp correlation with Calories: 0.833
+Calories_per_min correlation with Calories: 0.843
+Age_Weight correlation with Calories: 0.136
+Heart_Temp correlation with Calories: 0.925
+
+ANOVA TEST FOR SEX:
+----------------------------------------
+F-statistic: 60.364
+p-value: 0.000
+Result: Significant difference between groups

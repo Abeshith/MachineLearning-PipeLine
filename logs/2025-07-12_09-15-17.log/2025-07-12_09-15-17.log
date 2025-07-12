@@ -1,0 +1,15 @@
+[2025-07-12 09:15:17,321] 20 src.mlpipeline.logging - INFO - >>>>>> stage Data Ingestion Stage started <<<<<<
+[2025-07-12 09:15:17,321] 25 src.mlpipeline.logging - INFO - yaml file: config\config.yaml loaded sucessfully
+[2025-07-12 09:15:17,321] 25 src.mlpipeline.logging - INFO - yaml file: config\params.yaml loaded sucessfully
+[2025-07-12 09:15:17,323] 25 src.mlpipeline.logging - INFO - yaml file: config\schema.yaml loaded sucessfully
+[2025-07-12 09:15:17,323] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts
+[2025-07-12 09:15:17,323] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts/data_ingestion
+[2025-07-12 09:15:17,323] 34 src.mlpipeline.logging - INFO - artifacts\data_ingestion\train.csv already exists. Skipping download.
+[2025-07-12 09:15:17,323] 25 src.mlpipeline.logging - ERROR - 'DataIngestion' object has no attribute 'extract_zip_file'
+Traceback (most recent call last):
+  File "D:\MachineLearning PipeLine\run_pipeline.py", line 22, in main
+    data_ingestion_pipeline.initiate_data_ingestion()
+  File "D:\MachineLearning PipeLine\src\mlpipeline\pipeline\data_ingestion_pipeline.py", line 19, in initiate_data_ingestion
+    data_ingestion.extract_zip_file()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataIngestion' object has no attribute 'extract_zip_file'

@@ -1,0 +1,24 @@
+[2025-07-12 10:14:50,043] 20 src.mlpipeline.logging - INFO - >>>>>> stage Data Transformation Stage started <<<<<<
+[2025-07-12 10:14:50,043] 27 src.mlpipeline.logging - INFO - Validation status: True
+[2025-07-12 10:14:50,044] 25 src.mlpipeline.logging - INFO - yaml file: config\config.yaml loaded sucessfully
+[2025-07-12 10:14:50,047] 25 src.mlpipeline.logging - INFO - yaml file: config\params.yaml loaded sucessfully
+[2025-07-12 10:14:50,047] 25 src.mlpipeline.logging - INFO - yaml file: config\schema.yaml loaded sucessfully
+[2025-07-12 10:14:50,047] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts
+[2025-07-12 10:14:50,047] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts/data_transformation
+[2025-07-12 10:14:50,047] 95 src.mlpipeline.logging - INFO - Starting data transformation and splitting...
+[2025-07-12 10:14:50,469] 99 src.mlpipeline.logging - INFO - Data loaded successfully. Original shape: (750000, 9)
+[2025-07-12 10:14:50,469] 102 src.mlpipeline.logging - INFO - Applying feature engineering...
+[2025-07-12 10:14:50,512] 23 src.mlpipeline.logging - INFO - Added BMI feature
+[2025-07-12 10:14:50,517] 28 src.mlpipeline.logging - INFO - Added Calories_per_min feature
+[2025-07-12 10:14:50,561] 32 src.mlpipeline.logging - INFO - Converted Sex to numeric
+[2025-07-12 10:14:50,567] 37 src.mlpipeline.logging - INFO - Added Age_Weight interaction feature
+[2025-07-12 10:14:50,567] 41 src.mlpipeline.logging - INFO - Added Heart_Temp interaction feature
+[2025-07-12 10:14:50,567] 104 src.mlpipeline.logging - INFO - Feature engineering completed. New shape: (750000, 13)
+[2025-07-12 10:14:50,862] 47 src.mlpipeline.logging - INFO - Starting statistical analysis...
+[2025-07-12 10:14:51,043] 55 src.mlpipeline.logging - INFO - Removed 3132 outliers (0.52%)
+[2025-07-12 10:15:00,434] 58 src.mlpipeline.logging - INFO - json file saved at: artifacts\data_transformation\stats_report.json
+[2025-07-12 10:15:00,434] 121 src.mlpipeline.logging - INFO - Train and test data split completed.
+[2025-07-12 10:15:00,434] 122 src.mlpipeline.logging - INFO - Train data shape: (600000, 13)
+[2025-07-12 10:15:00,434] 123 src.mlpipeline.logging - INFO - Test data shape: (150000, 13)
+[2025-07-12 10:15:00,434] 124 src.mlpipeline.logging - INFO - Train clean data shape: (596868, 13)
+[2025-07-12 10:15:00,461] 26 src.mlpipeline.logging - INFO - >>>>>> stage Data Transformation Stage completed <<<<<<

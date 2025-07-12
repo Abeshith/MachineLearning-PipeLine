@@ -1,0 +1,18 @@
+[2025-07-12 10:04:00,634] 21 src.mlpipeline.logging - INFO - Running statistical tests on transformed data
+[2025-07-12 10:04:00,637] 25 src.mlpipeline.logging - INFO - yaml file: config\config.yaml loaded sucessfully
+[2025-07-12 10:04:00,638] 25 src.mlpipeline.logging - INFO - yaml file: config\params.yaml loaded sucessfully
+[2025-07-12 10:04:00,638] 25 src.mlpipeline.logging - INFO - yaml file: config\schema.yaml loaded sucessfully
+[2025-07-12 10:04:00,643] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts
+[2025-07-12 10:04:00,643] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts/data_transformation
+[2025-07-12 10:04:01,271] 87 src.mlpipeline.logging - INFO - Calculating correlations with target 'Calories'
+[2025-07-12 10:04:01,282] 93 src.mlpipeline.logging - INFO - Age correlation with Calories: 0.143
+[2025-07-12 10:04:01,291] 93 src.mlpipeline.logging - INFO - Height correlation with Calories: -0.005
+[2025-07-12 10:04:01,305] 93 src.mlpipeline.logging - INFO - Weight correlation with Calories: 0.014
+[2025-07-12 10:04:01,311] 93 src.mlpipeline.logging - INFO - Duration correlation with Calories: 0.960
+[2025-07-12 10:04:01,314] 93 src.mlpipeline.logging - INFO - Heart_Rate correlation with Calories: 0.908
+[2025-07-12 10:04:01,314] 93 src.mlpipeline.logging - INFO - Body_Temp correlation with Calories: 0.833
+[2025-07-12 10:04:01,335] 93 src.mlpipeline.logging - INFO - Calories_per_min correlation with Calories: 0.860
+[2025-07-12 10:04:01,343] 93 src.mlpipeline.logging - INFO - Age_Weight correlation with Calories: 0.136
+[2025-07-12 10:04:01,349] 93 src.mlpipeline.logging - INFO - Heart_Temp correlation with Calories: 0.925
+[2025-07-12 10:04:01,349] 110 src.mlpipeline.logging - INFO - Performing ANOVA test for Sex vs Calories
+[2025-07-12 10:04:01,398] 117 src.mlpipeline.logging - INFO - ANOVA test for Sex: F=65.078, p=0.000

@@ -1,0 +1,8 @@
+# Model parameters
+XGB:
+  max_depth: 8
+  colsample_bytree: 0.9
+  subsample: 0.9
+  n_estimators: 1500
+  learning_rate: 0.007
+  eval_metric: "rmse"

@@ -1,0 +1,7 @@
+[2025-07-12 09:35:51,629] 20 src.mlpipeline.logging - INFO - >>>>>> stage Data Validation Stage started <<<<<<
+[2025-07-12 09:35:51,637] 25 src.mlpipeline.logging - INFO - yaml file: config\config.yaml loaded sucessfully
+[2025-07-12 09:35:51,637] 25 src.mlpipeline.logging - INFO - yaml file: config\params.yaml loaded sucessfully
+[2025-07-12 09:35:51,637] 25 src.mlpipeline.logging - INFO - yaml file: config\schema.yaml loaded sucessfully
+[2025-07-12 09:35:51,637] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts
+[2025-07-12 09:35:51,637] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts/data_validation
+[2025-07-12 09:35:52,028] 23 src.mlpipeline.logging - INFO - >>>>>> stage Data Validation Stage completed <<<<<<

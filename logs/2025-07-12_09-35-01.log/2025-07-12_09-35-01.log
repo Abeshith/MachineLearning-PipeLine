@@ -1,0 +1,16 @@
+[2025-07-12 09:35:02,084] 22 src.mlpipeline.logging - INFO - >>>>>> stage Data Ingestion Stage started <<<<<<
+[2025-07-12 09:35:02,084] 25 src.mlpipeline.logging - INFO - yaml file: config\config.yaml loaded sucessfully
+[2025-07-12 09:35:02,090] 25 src.mlpipeline.logging - INFO - yaml file: config\params.yaml loaded sucessfully
+[2025-07-12 09:35:02,090] 25 src.mlpipeline.logging - INFO - yaml file: config\schema.yaml loaded sucessfully
+[2025-07-12 09:35:02,090] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts
+[2025-07-12 09:35:02,090] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts/data_ingestion
+[2025-07-12 09:35:02,090] 35 src.mlpipeline.logging - INFO - artifacts\data_ingestion\train.csv already exists. Skipping download.
+[2025-07-12 09:35:02,090] 44 src.mlpipeline.logging - INFO - No zip files found to extract.
+[2025-07-12 09:35:02,090] 25 src.mlpipeline.logging - INFO - >>>>>> stage Data Ingestion Stage completed <<<<<<
+[2025-07-12 09:35:02,090] 33 src.mlpipeline.logging - INFO - >>>>>> stage Data Validation Stage started <<<<<<
+[2025-07-12 09:35:02,090] 25 src.mlpipeline.logging - INFO - yaml file: config\config.yaml loaded sucessfully
+[2025-07-12 09:35:02,090] 25 src.mlpipeline.logging - INFO - yaml file: config\params.yaml loaded sucessfully
+[2025-07-12 09:35:02,090] 25 src.mlpipeline.logging - INFO - yaml file: config\schema.yaml loaded sucessfully
+[2025-07-12 09:35:02,090] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts
+[2025-07-12 09:35:02,090] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts/data_validation
+[2025-07-12 09:35:02,469] 36 src.mlpipeline.logging - INFO - >>>>>> stage Data Validation Stage completed <<<<<<

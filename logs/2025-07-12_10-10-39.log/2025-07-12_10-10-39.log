@@ -1,0 +1,4 @@
+[2025-07-12 10:10:40,410] 26 src.mlpipeline.logging - INFO - Loaded transformed data - Train: (596867, 13), Test: (149217, 13)
+[2025-07-12 10:10:41,094] 26 src.mlpipeline.logging - INFO - Loaded transformed data - Train: (596867, 13), Test: (149217, 13)
+[2025-07-12 10:10:41,127] 69 src.mlpipeline.logging - INFO - Prepared model data - Features: (596867, 10), Target: (596867,)
+[2025-07-12 10:10:41,127] 70 src.mlpipeline.logging - INFO - Feature names: ['Sex', 'Age', 'Height', 'Weight', 'Duration', 'Heart_Rate', 'Body_Temp', 'BMI', 'Age_Weight', 'Heart_Temp']

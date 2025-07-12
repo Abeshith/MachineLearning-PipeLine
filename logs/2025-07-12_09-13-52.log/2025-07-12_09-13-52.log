@@ -1,0 +1,28 @@
+[2025-07-12 09:13:52,907] 20 src.mlpipeline.logging - INFO - >>>>>> stage Data Ingestion Stage started <<<<<<
+[2025-07-12 09:13:52,908] 25 src.mlpipeline.logging - INFO - yaml file: config\config.yaml loaded sucessfully
+[2025-07-12 09:13:52,908] 25 src.mlpipeline.logging - INFO - yaml file: config\params.yaml loaded sucessfully
+[2025-07-12 09:13:52,908] 25 src.mlpipeline.logging - ERROR - yaml file is empty
+Traceback (most recent call last):
+  File "D:\MachineLearning PipeLine\src\mlpipeline\utils\common.py", line 26, in read_yaml
+    return ConfigBox(content)
+           ^^^^^^^^^^^^^^^^^^
+  File "box\\box.py", line 295, in box.box.Box.__init__
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MachineLearning PipeLine\run_pipeline.py", line 22, in main
+    data_ingestion_pipeline.initiate_data_ingestion()
+  File "D:\MachineLearning PipeLine\src\mlpipeline\pipeline\data_ingestion_pipeline.py", line 14, in initiate_data_ingestion
+    config = ConfigurationManager()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MachineLearning PipeLine\src\mlpipeline\config\configuration.py", line 11, in __init__
+    self.params = read_yaml(params_filepath)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MachineLearning PipeLine\.venv\Lib\site-packages\ensure\main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MachineLearning PipeLine\src\mlpipeline\utils\common.py", line 28, in read_yaml
+    raise ValueError("yaml file is empty")
+ValueError: yaml file is empty

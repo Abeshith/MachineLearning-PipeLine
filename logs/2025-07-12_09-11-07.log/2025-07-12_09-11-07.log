@@ -1,0 +1,21 @@
+[2025-07-12 09:11:10,704] 20 src.mlpipeline.logging - INFO - >>>>>> stage Data Ingestion Stage started <<<<<<
+[2025-07-12 09:11:10,706] 25 src.mlpipeline.logging - INFO - yaml file: config\config.yaml loaded sucessfully
+[2025-07-12 09:11:10,706] 25 src.mlpipeline.logging - ERROR - [Errno 2] No such file or directory: 'params.yaml'
+Traceback (most recent call last):
+  File "D:\MachineLearning PipeLine\run_pipeline.py", line 22, in main
+    data_ingestion_pipeline.initiate_data_ingestion()
+  File "D:\MachineLearning PipeLine\src\mlpipeline\pipeline\data_ingestion_pipeline.py", line 14, in initiate_data_ingestion
+    config = ConfigurationManager()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MachineLearning PipeLine\src\mlpipeline\config\configuration.py", line 11, in __init__
+    self.params = read_yaml(params_filepath)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MachineLearning PipeLine\.venv\Lib\site-packages\ensure\main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MachineLearning PipeLine\src\mlpipeline\utils\common.py", line 30, in read_yaml
+    raise e
+  File "D:\MachineLearning PipeLine\src\mlpipeline\utils\common.py", line 23, in read_yaml
+    with open(path_to_yaml) as yml:
+         ^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'params.yaml'

@@ -1,0 +1,15 @@
+[2025-07-12 10:25:57,707] 20 src.mlpipeline.logging - INFO - >>>>>> stage Data Transformation Stage started <<<<<<
+[2025-07-12 10:25:57,707] 27 src.mlpipeline.logging - INFO - Validation status: True
+[2025-07-12 10:25:57,707] 25 src.mlpipeline.logging - INFO - yaml file: config\config.yaml loaded sucessfully
+[2025-07-12 10:25:57,724] 25 src.mlpipeline.logging - INFO - yaml file: config\params.yaml loaded sucessfully
+[2025-07-12 10:25:57,724] 25 src.mlpipeline.logging - INFO - yaml file: config\schema.yaml loaded sucessfully
+[2025-07-12 10:25:57,724] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts
+[2025-07-12 10:25:57,724] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts/data_transformation
+[2025-07-12 10:25:58,086] 16 src.mlpipeline.logging - INFO - Original data loaded: (750000, 9)
+[2025-07-12 10:25:58,187] 20 src.mlpipeline.logging - INFO - Feature engineering completed: (750000, 13)
+[2025-07-12 10:25:58,473] 34 src.mlpipeline.logging - INFO - Starting statistical tests...
+[2025-07-12 10:25:58,776] 83 src.mlpipeline.logging - INFO - Statistical test results saved to artifacts\data_transformation\statstestresults.txt
+[2025-07-12 10:26:03,888] 33 src.mlpipeline.logging - INFO - Train and test data split completed.
+[2025-07-12 10:26:03,889] 34 src.mlpipeline.logging - INFO - Train data shape: (600000, 13)
+[2025-07-12 10:26:03,889] 35 src.mlpipeline.logging - INFO - Test data shape: (150000, 13)
+[2025-07-12 10:26:03,900] 26 src.mlpipeline.logging - INFO - >>>>>> stage Data Transformation Stage completed <<<<<<

@@ -1,0 +1,18 @@
+[2025-07-12 09:14:34,065] 20 src.mlpipeline.logging - INFO - >>>>>> stage Data Ingestion Stage started <<<<<<
+[2025-07-12 09:14:34,065] 25 src.mlpipeline.logging - INFO - yaml file: config\config.yaml loaded sucessfully
+[2025-07-12 09:14:34,067] 25 src.mlpipeline.logging - INFO - yaml file: config\params.yaml loaded sucessfully
+[2025-07-12 09:14:34,067] 25 src.mlpipeline.logging - INFO - yaml file: config\schema.yaml loaded sucessfully
+[2025-07-12 09:14:34,070] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts
+[2025-07-12 09:14:34,070] 44 src.mlpipeline.logging - INFO - Creating a Directory at: artifacts/data_ingestion
+[2025-07-12 09:14:34,070] 14 src.mlpipeline.logging - INFO - Downloading from Kaggle...
+[2025-07-12 09:14:43,434] 21 src.mlpipeline.logging - INFO - Downloaded to: artifacts/data_ingestion/train.csv
+[2025-07-12 09:14:43,434] 25 src.mlpipeline.logging - ERROR - 'str' object has no attribute 'with_suffix'
+Traceback (most recent call last):
+  File "D:\MachineLearning PipeLine\run_pipeline.py", line 22, in main
+    data_ingestion_pipeline.initiate_data_ingestion()
+  File "D:\MachineLearning PipeLine\src\mlpipeline\pipeline\data_ingestion_pipeline.py", line 18, in initiate_data_ingestion
+    data_ingestion.download_file()
+  File "D:\MachineLearning PipeLine\src\mlpipeline\components\data_ingestion.py", line 24, in download_file
+    zip_file = self.config.load_data_file.with_suffix(".csv.zip")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'with_suffix'
