@@ -252,10 +252,42 @@ kubectl get svc
 # Access application using external IP in browser
 127.0.0.1
 ```
-
 <div align="center">
 <img src="outputs/service.png" alt="Kubernetes Service Status" width="800" height="400"/>
 </div>
+
+#### **6. Configuring Ingress - (Optional)**
+```bash
+# Deploy the ingress.yaml file
+kubectl apply -f ingress.yaml
+
+# Install the Ingress Controller (nginx)
+minikube addons enable ingress
+
+# Check the downloaded Ingress
+kubectl get pods -A | grep nginx
+
+# Check Ingress is Deployed
+kubectl get ingress # A Address is Being Updated like -> 192.168.49.2
+
+# for setup local system configuraton
+sudo vim /etc/hosts
+
+# Add
+127.0.0.1       localhost
+127.0.1.1       Abis-PC.        Abis-PC
+192.168.49.2    foo.bar.com
+esc - :wq!
+
+# Check Upadted or not
+ping foo.bar.com
+
+# then go to browser
+http://foo.bar.com/demo
+http://foo.bar.com/admin
+
+```
+
 
 ---
 
